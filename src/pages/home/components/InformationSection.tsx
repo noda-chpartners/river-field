@@ -2,9 +2,24 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const infoItems = [
   { label: '営業時間', value: '10:00 ～ 20:00', note: '最終来店時刻 18:00' },
-  { label: '定休日', value: '日曜日', note: '' },
-  { label: '席数', value: '5席', note: '完全予約制' },
-  { label: '鑑定相談時間', value: '一組2時間', note: '' },
+  { label: '定休日', value: '日曜日', note: 'お急ぎの鑑定依頼や日曜日しか来店出来ない等の場合は営業いたします。' },
+  { label: '席数', value: '5席', note: '' },
+  { 
+    label: '住所', 
+    value: '〒473-0902 愛知県豊田市大林町10丁目2番地4', 
+    note: (
+      <a 
+        href="https://maps.app.goo.gl/xTcyEwYTaNLCDMgQ8"
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 text-sm text-accent-400 hover:text-accent-300 transition-colors duration-200"
+      >
+        住所をGoogle Mapで開く
+        <i className="ri-map-pin-line"></i>
+      </a>
+    )
+  },
+  { label: '最寄駅', value: '末野原駅より徒歩15分', note: '' },
   { label: '電話番号', value: '090-4867-3803', note: '', href: 'tel:090-4867-3803' },
 ];
 
@@ -21,11 +36,11 @@ export default function InformationSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className="text-secondary-400 tracking-[0.25em] text-xs md:text-sm mb-4 font-label">
+          <p className="text-accent-400 tracking-[0.25em] text-xs md:text-sm mb-4 font-label">
             INFORMATION
           </p>
           <h2 className="font-heading text-3xl md:text-5xl text-foreground-950 tracking-wider">
-            ご利用案内
+            基本情報
           </h2>
         </div>
 
@@ -43,23 +58,23 @@ export default function InformationSection() {
                   : ''
               }`}
             >
-              <span className="text-foreground-900 text-xs tracking-wider w-32 flex-shrink-0 font-label whitespace-nowrap">
+              <span className="text-foreground-900 text-sm tracking-wider w-32 flex-shrink-0 font-label whitespace-nowrap">
                 {item.label}
               </span>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+              <div className="flex flex-col gap-1">
                 {item.href ? (
                   <a
                     href={item.href}
-                    className="text-primary-400 hover:text-primary-300 text-sm transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                    className="text-accent-400 hover:text-accent-300 text-base transition-colors duration-200 whitespace-nowrap cursor-pointer"
                   >
                     {item.value}
                   </a>
                 ) : (
-                  <span className="text-foreground-950 text-sm">{item.value}</span>
+                  <span className="text-foreground-950 text-base">{item.value}</span>
                 )}
                 {item.note && (
-                  <span className="text-foreground-700 text-xs">
-                    （{item.note}）
+                  <span className="text-foreground-800 text-xs">
+                    {item.note}
                   </span>
                 )}
               </div>

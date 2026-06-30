@@ -53,15 +53,15 @@ export default function FortuneSection() {
           {fortuneMethods.map((method, index) => (
             <div
               key={method.name}
-              className={`group bg-background-100/60 border border-background-300/30 rounded-2xl p-8 hover:border-primary-500/30 transition-all duration-500 ${
+              className={`group bg-background-100/60 border border-background-300/30 rounded-2xl p-8 hover:border-accent-500/30 transition-all duration-500 ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${0.15 + index * 0.1}s` }}
             >
-              <div className="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center mb-5 group-hover:bg-primary-500/20 transition-colors duration-300">
-                <i className={`${method.icon} text-primary-400 text-xl`}></i>
+              <div className="w-12 h-12 rounded-xl bg-accent-500/10 flex items-center justify-center mb-5 group-hover:bg-accent-500/20 transition-colors duration-300">
+                <i className={`${method.icon} text-accent-400 text-xl`}></i>
               </div>
               <h3 className="font-heading text-lg text-foreground-950 tracking-wider mb-3 whitespace-nowrap">
                 {method.name}

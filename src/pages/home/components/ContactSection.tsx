@@ -5,7 +5,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="relative py-24 md:py-32 px-6 md:px-10 bg-background-50">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/20 to-transparent"></div>
 
       <div ref={ref} className="max-w-3xl mx-auto text-center">
         <div
@@ -13,7 +13,7 @@ export default function ContactSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className="text-primary-400 tracking-[0.25em] text-xs md:text-sm mb-4 font-label">
+          <p className="text-accent-400 tracking-[0.25em] text-xs md:text-sm mb-4 font-label">
             CONTACT
           </p>
           <h2 className="font-heading text-3xl md:text-5xl text-foreground-950 tracking-wider mb-6">
@@ -21,8 +21,6 @@ export default function ContactSection() {
           </h2>
           <p className="text-foreground-800 text-sm leading-relaxed max-w-lg mx-auto mb-10">
             完全予約制です。まずはお気軽にお電話ください。
-            <br />
-            あなたの運命と向き合う、静かな時間をご用意しております。
           </p>
         </div>
 
@@ -31,13 +29,10 @@ export default function ContactSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="w-16 h-16 rounded-2xl bg-primary-500/10 flex items-center justify-center mx-auto mb-6">
-            <i className="ri-phone-line text-primary-400 text-2xl"></i>
-          </div>
 
           <a
             href="tel:090-4867-3803"
-            className="inline-block text-primary-400 hover:text-primary-300 text-3xl md:text-4xl font-heading tracking-wider mb-3 transition-colors duration-200 cursor-pointer"
+            className="inline-block text-accent-400 hover:text-accent-300 text-3xl md:text-4xl font-heading tracking-wider mb-3 transition-colors duration-200 cursor-pointer"
           >
             090-4867-3803
           </a>
@@ -48,7 +43,7 @@ export default function ContactSection() {
 
           <a
             href="tel:090-4867-3803"
-            className="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-400 text-background-50 px-8 py-4 rounded-full text-sm font-medium tracking-wider transition-all duration-300 whitespace-nowrap cursor-pointer"
+            className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-400 text-background-50 px-8 py-4 rounded-full text-sm font-medium tracking-wider transition-all duration-300 whitespace-nowrap cursor-pointer"
           >
             <i className="ri-phone-line"></i>
             お電話でご予約

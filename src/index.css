@@ -4,19 +4,21 @@
 
 :root {
   --font-heading: 'Noto Serif JP', serif;
-  --font-body: 'Noto Sans JP', sans-serif;
-  --font-label: 'Noto Sans JP', sans-serif;
+  --font-body:  'Hina Mincho', serif;
+  --font-label:  'Hina Mincho', serif;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
     font-family: var(--font-body);
     background-color: oklch(0.14 0.025 258);
     color: oklch(0.96 0 0);
+    overflow-x: clip;
   }
 }
 
