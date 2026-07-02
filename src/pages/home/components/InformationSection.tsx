@@ -84,7 +84,7 @@ export default function InformationSection() {
 
         {/* Notice */}
         <div
-          className={`mt-6 bg-accent-500/20 border border-accent-500/60 rounded-xl px-5 py-4 flex items-start gap-3 transition-all duration-[1s] ease-out delay-200 ${
+          className={`mt-6 bg-accent-500/20 border border-accent-500/60 rounded-xl px-5 py-4 flex items-center justify-center gap-3 transition-all duration-[1s] ease-out delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >

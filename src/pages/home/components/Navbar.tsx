@@ -28,7 +28,7 @@ export default function Navbar() {
         : 'bg-transparent'
         }`}
     >
-      <div className="px-6 md:px-10 py-4 flex items-center justify-between w-full">
+      <div className="px-6 md:px-10 py-4 flex items-center justify-between w-full max-w-6xl mx-auto">
         <a href="#" className="flex items-center group">
           <img
             src={logo}
@@ -43,7 +43,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-foreground-700 hover:text-accent-400 transition-colors duration-300 text-sm tracking-wider whitespace-nowrap"
+              className="text-foreground-900 hover:text-accent-400 transition-colors duration-300 text-sm tracking-wider whitespace-nowrap"
             >
               {link.label}
             </a>
@@ -71,7 +71,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-foreground-700 hover:text-accent-400 transition-colors duration-300 text-sm tracking-wider py-2 whitespace-nowrap"
+              className="text-foreground-900 hover:text-accent-400 transition-colors duration-300 text-sm tracking-wider py-2 whitespace-nowrap"
             >
               {link.label}
             </a>

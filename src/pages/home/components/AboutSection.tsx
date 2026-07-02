@@ -6,6 +6,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="relative py-24 md:py-32 px-6 md:px-10 bg-transparent">
+     <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/40 to-transparent"></div>
       <div
         ref={ref}
         className={`max-w-6xl mx-auto transition-all duration-[1s] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -14,13 +15,13 @@ export default function AboutSection() {
         <div className="relative flex flex-col md:flex-row md:items-center">
           {/* 左：テキスト */}
           <div className="relative z-10 md:w-[60%] md:pr-8">
-            <p className="text-accent-400 tracking-[0.25em] text-xs md:text-sm mb-3 font-label">
+            <p className="text-accent-400 tracking-[0.25em] text-xs md:text-sm mb-2 font-label">
               ABOUT
             </p>
-            <h2 className="font-heading text-3xl md:text-5xl text-foreground-950 leading-snug tracking-wider mb-3">
+            <h2 className="font-heading text-3xl md:text-5xl text-foreground-950 leading-snug tracking-wider mb-4">
               マスター紹介
             </h2>
-            <p className="text-foreground-950 text-lg md:text-2xl leading-relaxed mb-4">
+            <p className="text-accent-400 font-bold text-xl md:text-2xl leading-relaxed mb-3">
               観音霊代退魔師 佐藤正婁
             </p>
             <p className="text-foreground-900 text-sm md:text-base leading-relaxed">

@@ -20,7 +20,7 @@ export default function ContactSection() {
             お問い合わせ
           </h2>
           <p className="text-foreground-800 text-sm leading-relaxed max-w-lg mx-auto mb-10">
-            完全予約制です。まずはお気軽にお電話ください。
+            完全予約制です。<br />まずはお気軽にお電話ください。
           </p>
         </div>
 
@@ -31,7 +31,6 @@ export default function ContactSection() {
         >
 
           <a
-            href="tel:090-4867-3803"
             className="inline-block text-accent-400 hover:text-accent-300 text-3xl md:text-4xl font-heading tracking-wider mb-3 transition-colors duration-200 cursor-pointer"
           >
             090-4867-3803

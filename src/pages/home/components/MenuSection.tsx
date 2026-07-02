@@ -75,15 +75,15 @@ export default function MenuSection() {
 
   return (
     <>
-      <section id="menu" ref={ref} className="py-24 md:py-32">
+      <section id="menu" ref={ref} className="">
         {/* 背景画像から外したヘッダー部分 */}
         <div className="max-w-6xl mx-auto px-6 md:px-10">
           <div
-            className={`text-center mb-16 transition-all duration-[1s] ease-out ${
+            className={`text-center mb-10 transition-all duration-[1s] ease-out ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <p className="text-accent-400 tracking-[0.25em] text-xs md:text-sm mb-4 font-label">
+            <p className="text-accent-400 tracking-[0.25em] text-xs md:text-sm mb-4 mt-20 font-label">
               MENU &amp; PRICE
             </p>
             <h2 className="font-heading text-3xl md:text-5xl text-foreground-950 tracking-wider mb-3">
@@ -100,13 +100,12 @@ export default function MenuSection() {
           className="relative py-16 px-6 md:px-10 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${menuback})` }}
         >
-          {/* 背景画像の上にうっすら半透明のレイヤーを入れる場合は残し、不要であれば削除してください */}
-          <div className="absolute inset-0 bg-background-50/20"></div>
+          <div className="absolute inset-0 bg-background-50/50"></div>
           
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/40 to-transparent z-10"></div>
 
           <div className="max-w-6xl mx-auto relative z-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
               {menus.map((menuItem, index) => (
                 <div
                   key={menuItem.name}
@@ -114,8 +113,8 @@ export default function MenuSection() {
                     index === 0 ? 'sm:col-span-2' : '' 
                   } ${
                     menuItem.featured
-                      ? 'border-accent-500/40 bg-accent-500/5'
-                      : 'border-background-300/30 bg-background-50/60 hover:border-accent-500/20'
+                    ? 'border-accent-500/40 bg-background-50/60'
+                    : 'border-background-300/30 bg-background-50/60 hover:border-accent-500/20'
                   } ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
@@ -128,7 +127,7 @@ export default function MenuSection() {
                   )}
 
                   <div>
-                    <h3 className="font-heading text-base text-foreground-950 tracking-wider mb-1 whitespace-nowrap">
+                    <h3 className="font-heading text-base font-bold text-accent-400 tracking-wider mb-1 whitespace-nowrap">
                       {menuItem.name}
                       {menuItem.sub && (
                         <span className="text-foreground-800 text-xs ml-1">{menuItem.sub}</span>
@@ -145,12 +144,12 @@ export default function MenuSection() {
                         onClick={() => setIsDrinkMenuOpen(true)}
                         className="text-xs border border-accent-500 text-accent-500 px-4 py-1.5 rounded-full hover:bg-accent-500 hover:text-background-50 transition-colors"
                       >
-                        ドリンクメニューを見る
+                        ドリンクを見る
                       </button>
                     ) : (
                       <div></div>
                     )}
-                    <span className="font-heading text-accent-400 text-base md:text-lg whitespace-nowrap ml-2">
+                    <span className="font-heading text-accent-400 text-lg md:text-xl whitespace-nowrap ml-2">
                       {menuItem.price}
                     </span>
                   </div>
