@@ -4,9 +4,9 @@ export default function ContactSection() {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 px-6 md:px-10 bg-background-50">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/20 to-transparent"></div>
-
+    <section id="contact" className="relative py-24 md:py-32 px-6 md:px-10 ">
+      
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/40 to-transparent"></div>
       <div ref={ref} className="max-w-3xl mx-auto text-center">
         <div
           className={`transition-all duration-[1s] ease-out ${

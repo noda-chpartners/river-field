@@ -1,16 +1,21 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import hero from '@/assets/hero.jpg';
 
 export default function HeroSection() {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background-50">
-      {/* Subtle radial glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent-500/5 blur-[120px]"></div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full bg-secondary-500/8 blur-[100px]"></div>
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      <img
+        src={hero}
+        alt="Mystical waterfall and monks"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
 
-      {/* Decorative lines */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/20 to-transparent"></div>
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent-500/5 blur-[120px] z-10"></div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full bg-secondary-500/8 blur-[100px] z-10"></div>
+
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/20 to-transparent z-10"></div>
 
       <div
         ref={ref}
@@ -18,7 +23,6 @@ export default function HeroSection() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
-      
         <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl text-foreground-950 leading-tight tracking-wider mb-6">
           運命の
           <span className="block text-accent-400">扉を開く</span>
@@ -39,8 +43,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom fade gradient */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background-50 to-transparent pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background-50 to-transparent pointer-events-none z-10"></div>
     </section>
   );
 }

@@ -14,9 +14,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: '店舗紹介', href: '#about' },
     { label: '鑑定メニュー', href: '#menu' },
     { label: '占術', href: '#fortune' },
+    { label: 'マスター紹介', href: '#about' },
     { label: '基本情報', href: '#information' },
     { label: 'お問い合わせ', href: '#contact' },
   ];

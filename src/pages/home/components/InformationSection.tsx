@@ -27,8 +27,8 @@ export default function InformationSection() {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   return (
-    <section id="information" className="relative py-24 md:py-32 px-6 md:px-10 bg-background-100">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary-500/15 to-transparent"></div>
+    <section id="information" className="relative py-24 md:py-32 px-6 md:px-10 ">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/40 to-transparent"></div>
 
       <div ref={ref} className="max-w-4xl mx-auto">
         <div

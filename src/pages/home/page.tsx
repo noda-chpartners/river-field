@@ -6,16 +6,20 @@ import FortuneSection from './components/FortuneSection';
 import InformationSection from './components/InformationSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import background from '@/assets/background.png';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background-50">
+    <div
+  className="min-h-screen bg-cover bg-center bg-no-repeat md:bg-fixed"
+  style={{ backgroundImage: `url(${background})` }}
+>
       <Navbar />
       <main>
         <HeroSection />
-        <AboutSection />
         <MenuSection />
         <FortuneSection />
+        <AboutSection />
         <InformationSection />
         <ContactSection />
       </main>

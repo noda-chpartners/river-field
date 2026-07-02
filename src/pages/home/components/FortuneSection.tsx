@@ -32,8 +32,8 @@ export default function FortuneSection() {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
   return (
-    <section id="fortune" className="relative py-24 md:py-32 px-6 md:px-10 bg-background-50">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/15 to-transparent"></div>
+    <section id="fortune" className="relative py-24 md:py-32 px-6 md:px-10">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/40 to-transparent"></div>
 
       <div ref={ref} className="max-w-6xl mx-auto">
         <div
