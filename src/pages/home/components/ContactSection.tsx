@@ -37,7 +37,7 @@ export default function ContactSection() {
           </a>
 
           <p className="text-foreground-700 text-sm mb-8">
-            営業時間 10:00 ～ 20:00（日曜定休）
+            営業時間 10:00 ～ 20:00
           </p>
 
           <a

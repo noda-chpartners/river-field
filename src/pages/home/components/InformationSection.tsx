@@ -2,7 +2,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const infoItems = [
   { label: '営業時間', value: '10:00 ～ 20:00', note: '最終来店時刻 18:00' },
-  { label: '定休日', value: '日曜日', note: 'お急ぎの鑑定依頼や日曜日しか来店出来ない等の場合は営業いたします。' },
+  { label: '定休日', value: '無し', note: '' },
   { label: '席数', value: '5席', note: '' },
   { 
     label: '住所', 
